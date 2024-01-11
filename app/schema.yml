@@ -1,0 +1,2836 @@
+openapi: 3.0.2
+info:
+  title: ''
+  version: ''
+paths:
+  /api/authors/:
+    get:
+      operationId: listAuthors
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Author'
+          description: ''
+      tags:
+      - api
+    post:
+      operationId: createAuthor
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Author'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Author'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Author'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Author'
+          description: ''
+      tags:
+      - api
+  /api/authors/{id}/:
+    get:
+      operationId: retrieveAuthor
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this Author.
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Author'
+          description: ''
+      tags:
+      - api
+    put:
+      operationId: updateAuthor
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this Author.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Author'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Author'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Author'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Author'
+          description: ''
+      tags:
+      - api
+    patch:
+      operationId: partialUpdateAuthor
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this Author.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Author'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Author'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Author'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Author'
+          description: ''
+      tags:
+      - api
+    delete:
+      operationId: destroyAuthor
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this Author.
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
+      tags:
+      - api
+  /api/publishers/:
+    get:
+      operationId: listPublishers
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Publisher'
+          description: ''
+      tags:
+      - api
+    post:
+      operationId: createPublisher
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Publisher'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Publisher'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Publisher'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Publisher'
+          description: ''
+      tags:
+      - api
+  /api/publishers/{id}/:
+    get:
+      operationId: retrievePublisher
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this Publisher.
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Publisher'
+          description: ''
+      tags:
+      - api
+    put:
+      operationId: updatePublisher
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this Publisher.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Publisher'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Publisher'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Publisher'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Publisher'
+          description: ''
+      tags:
+      - api
+    patch:
+      operationId: partialUpdatePublisher
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this Publisher.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Publisher'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Publisher'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Publisher'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Publisher'
+          description: ''
+      tags:
+      - api
+    delete:
+      operationId: destroyPublisher
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this Publisher.
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
+      tags:
+      - api
+  /api/faculties/:
+    get:
+      operationId: listFacultys
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Faculty'
+          description: ''
+      tags:
+      - api
+    post:
+      operationId: createFaculty
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Faculty'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Faculty'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Faculty'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Faculty'
+          description: ''
+      tags:
+      - api
+  /api/faculties/{id}/:
+    get:
+      operationId: retrieveFaculty
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this Faculty.
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Faculty'
+          description: ''
+      tags:
+      - api
+    put:
+      operationId: updateFaculty
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this Faculty.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Faculty'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Faculty'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Faculty'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Faculty'
+          description: ''
+      tags:
+      - api
+    patch:
+      operationId: partialUpdateFaculty
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this Faculty.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Faculty'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Faculty'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Faculty'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Faculty'
+          description: ''
+      tags:
+      - api
+    delete:
+      operationId: destroyFaculty
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this Faculty.
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
+      tags:
+      - api
+  /api/languages/:
+    get:
+      operationId: listLanguages
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Language'
+          description: ''
+      tags:
+      - api
+    post:
+      operationId: createLanguage
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Language'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Language'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Language'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Language'
+          description: ''
+      tags:
+      - api
+  /api/languages/{id}/:
+    get:
+      operationId: retrieveLanguage
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this Language.
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Language'
+          description: ''
+      tags:
+      - api
+    put:
+      operationId: updateLanguage
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this Language.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Language'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Language'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Language'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Language'
+          description: ''
+      tags:
+      - api
+    patch:
+      operationId: partialUpdateLanguage
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this Language.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Language'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Language'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Language'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Language'
+          description: ''
+      tags:
+      - api
+    delete:
+      operationId: destroyLanguage
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this Language.
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
+      tags:
+      - api
+  /api/categories/:
+    get:
+      operationId: listCategorys
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Category'
+          description: ''
+      tags:
+      - api
+    post:
+      operationId: createCategory
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Category'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Category'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Category'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Category'
+          description: ''
+      tags:
+      - api
+  /api/categories/{id}/:
+    get:
+      operationId: retrieveCategory
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this Category.
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Category'
+          description: ''
+      tags:
+      - api
+    put:
+      operationId: updateCategory
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this Category.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Category'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Category'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Category'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Category'
+          description: ''
+      tags:
+      - api
+    patch:
+      operationId: partialUpdateCategory
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this Category.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Category'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Category'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Category'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Category'
+          description: ''
+      tags:
+      - api
+    delete:
+      operationId: destroyCategory
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this Category.
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
+      tags:
+      - api
+  /api/sections/:
+    get:
+      operationId: listSections
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Section'
+          description: ''
+      tags:
+      - api
+    post:
+      operationId: createSection
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Section'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Section'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Section'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Section'
+          description: ''
+      tags:
+      - api
+  /api/sections/{id}/:
+    get:
+      operationId: retrieveSection
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this Section.
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Section'
+          description: ''
+      tags:
+      - api
+    put:
+      operationId: updateSection
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this Section.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Section'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Section'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Section'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Section'
+          description: ''
+      tags:
+      - api
+    patch:
+      operationId: partialUpdateSection
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this Section.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Section'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Section'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Section'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Section'
+          description: ''
+      tags:
+      - api
+    delete:
+      operationId: destroySection
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this Section.
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
+      tags:
+      - api
+  /api/books/:
+    get:
+      operationId: listBooks
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Book'
+          description: ''
+      tags:
+      - api
+    post:
+      operationId: createBook
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Book'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Book'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Book'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Book'
+          description: ''
+      tags:
+      - api
+  /api/books/{id}/:
+    get:
+      operationId: retrieveBook
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this Book.
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Book'
+          description: ''
+      tags:
+      - api
+    put:
+      operationId: updateBook
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this Book.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Book'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Book'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Book'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Book'
+          description: ''
+      tags:
+      - api
+    patch:
+      operationId: partialUpdateBook
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this Book.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Book'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Book'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Book'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Book'
+          description: ''
+      tags:
+      - api
+    delete:
+      operationId: destroyBook
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this Book.
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
+      tags:
+      - api
+  /api/ebooks/:
+    get:
+      operationId: listEBooks
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/EBook'
+          description: ''
+      tags:
+      - api
+    post:
+      operationId: createEBook
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EBook'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/EBook'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/EBook'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EBook'
+          description: ''
+      tags:
+      - api
+  /api/ebooks/{id}/:
+    get:
+      operationId: retrieveEBook
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this EBook.
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EBook'
+          description: ''
+      tags:
+      - api
+    put:
+      operationId: updateEBook
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this EBook.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EBook'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/EBook'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/EBook'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EBook'
+          description: ''
+      tags:
+      - api
+    patch:
+      operationId: partialUpdateEBook
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this EBook.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EBook'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/EBook'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/EBook'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EBook'
+          description: ''
+      tags:
+      - api
+    delete:
+      operationId: destroyEBook
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this EBook.
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
+      tags:
+      - api
+  /api/copies/:
+    get:
+      operationId: listCopys
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Copy'
+          description: ''
+      tags:
+      - api
+    post:
+      operationId: createCopy
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Copy'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Copy'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Copy'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Copy'
+          description: ''
+      tags:
+      - api
+  /api/copies/{id}/:
+    get:
+      operationId: retrieveCopy
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this Copy.
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Copy'
+          description: ''
+      tags:
+      - api
+    put:
+      operationId: updateCopy
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this Copy.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Copy'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Copy'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Copy'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Copy'
+          description: ''
+      tags:
+      - api
+    patch:
+      operationId: partialUpdateCopy
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this Copy.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Copy'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Copy'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Copy'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Copy'
+          description: ''
+      tags:
+      - api
+    delete:
+      operationId: destroyCopy
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this Copy.
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
+      tags:
+      - api
+  /api/libraries/:
+    get:
+      operationId: listLibraries
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Libraries'
+          description: ''
+      tags:
+      - api
+    post:
+      operationId: createLibraries
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Libraries'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Libraries'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Libraries'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Libraries'
+          description: ''
+      tags:
+      - api
+  /api/libraries/{id}/:
+    get:
+      operationId: retrieveLibraries
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this Library.
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Libraries'
+          description: ''
+      tags:
+      - api
+    put:
+      operationId: updateLibraries
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this Library.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Libraries'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Libraries'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Libraries'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Libraries'
+          description: ''
+      tags:
+      - api
+    patch:
+      operationId: partialUpdateLibraries
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this Library.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Libraries'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Libraries'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Libraries'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Libraries'
+          description: ''
+      tags:
+      - api
+    delete:
+      operationId: destroyLibraries
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this Library.
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
+      tags:
+      - api
+  /api/auth/Cities/:
+    get:
+      operationId: listCities
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Cities'
+          description: ''
+      tags:
+      - api
+    post:
+      operationId: createCities
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Cities'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Cities'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Cities'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Cities'
+          description: ''
+      tags:
+      - api
+  /api/auth/Cities/{id}/:
+    get:
+      operationId: retrieveCities
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this Cities.
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Cities'
+          description: ''
+      tags:
+      - api
+    put:
+      operationId: updateCities
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this Cities.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Cities'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Cities'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Cities'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Cities'
+          description: ''
+      tags:
+      - api
+    patch:
+      operationId: partialUpdateCities
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this Cities.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Cities'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Cities'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Cities'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Cities'
+          description: ''
+      tags:
+      - api
+    delete:
+      operationId: destroyCities
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this Cities.
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
+      tags:
+      - api
+  /api/auth/Semesters/:
+    get:
+      operationId: listSemesters
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Semesters'
+          description: ''
+      tags:
+      - api
+    post:
+      operationId: createSemesters
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Semesters'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Semesters'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Semesters'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Semesters'
+          description: ''
+      tags:
+      - api
+  /api/auth/Semesters/{id}/:
+    get:
+      operationId: retrieveSemesters
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this Semester.
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Semesters'
+          description: ''
+      tags:
+      - api
+    put:
+      operationId: updateSemesters
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this Semester.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Semesters'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Semesters'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Semesters'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Semesters'
+          description: ''
+      tags:
+      - api
+    patch:
+      operationId: partialUpdateSemesters
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this Semester.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Semesters'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Semesters'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Semesters'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Semesters'
+          description: ''
+      tags:
+      - api
+    delete:
+      operationId: destroySemesters
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this Semester.
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
+      tags:
+      - api
+  /api/auth/Desposites/:
+    get:
+      operationId: listDesposites
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Desposites'
+          description: ''
+      tags:
+      - api
+    post:
+      operationId: createDesposites
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Desposites'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Desposites'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Desposites'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Desposites'
+          description: ''
+      tags:
+      - api
+  /api/auth/Desposites/{id}/:
+    get:
+      operationId: retrieveDesposites
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this Deposit.
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Desposites'
+          description: ''
+      tags:
+      - api
+    put:
+      operationId: updateDesposites
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this Deposit.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Desposites'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Desposites'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Desposites'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Desposites'
+          description: ''
+      tags:
+      - api
+    patch:
+      operationId: partialUpdateDesposites
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this Deposit.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Desposites'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Desposites'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Desposites'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Desposites'
+          description: ''
+      tags:
+      - api
+    delete:
+      operationId: destroyDesposites
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this Deposit.
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
+      tags:
+      - api
+  /api/auth/Profile/:
+    get:
+      operationId: listProfiles
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Profile'
+          description: ''
+      tags:
+      - api
+    post:
+      operationId: createProfile
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Profile'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Profile'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Profile'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Profile'
+          description: ''
+      tags:
+      - api
+  /api/auth/Profile/{id}/:
+    get:
+      operationId: retrieveProfile
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this Profile.
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Profile'
+          description: ''
+      tags:
+      - api
+    put:
+      operationId: updateProfile
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this Profile.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Profile'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Profile'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Profile'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Profile'
+          description: ''
+      tags:
+      - api
+    patch:
+      operationId: partialUpdateProfile
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this Profile.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Profile'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Profile'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Profile'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Profile'
+          description: ''
+      tags:
+      - api
+    delete:
+      operationId: destroyProfile
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this Profile.
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
+      tags:
+      - api
+  /api/auth/users/:
+    get:
+      operationId: listuser_lists
+      description: Get a list of all users.
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items: {}
+          description: ''
+      tags:
+      - api
+  /api/auth/users/{id}/:
+    get:
+      operationId: retrieveuser_details
+      description: Get details for a specific user by their primary key.
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: ''
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: {}
+          description: ''
+      tags:
+      - api
+  /api/news/news/:
+    get:
+      operationId: listNews
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/News'
+          description: ''
+      tags:
+      - api
+    post:
+      operationId: createNews
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/News'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/News'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/News'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/News'
+          description: ''
+      tags:
+      - api
+  /api/news/news/{id}/:
+    get:
+      operationId: retrieveNews
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this News.
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/News'
+          description: ''
+      tags:
+      - api
+    put:
+      operationId: updateNews
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this News.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/News'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/News'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/News'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/News'
+          description: ''
+      tags:
+      - api
+    patch:
+      operationId: partialUpdateNews
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this News.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/News'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/News'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/News'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/News'
+          description: ''
+      tags:
+      - api
+    delete:
+      operationId: destroyNews
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this News.
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
+      tags:
+      - api
+  /api/auth/register/:
+    post:
+      operationId: createregister_user
+      description: Register a new user.
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema: {}
+          application/x-www-form-urlencoded:
+            schema: {}
+          multipart/form-data:
+            schema: {}
+      responses:
+        '201':
+          content:
+            application/json:
+              schema: {}
+          description: ''
+      tags:
+      - api
+  /api/auth/login/:
+    post:
+      operationId: createuser_login
+      description: Log in a user and return an authentication token.
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema: {}
+          application/x-www-form-urlencoded:
+            schema: {}
+          multipart/form-data:
+            schema: {}
+      responses:
+        '201':
+          content:
+            application/json:
+              schema: {}
+          description: ''
+      tags:
+      - api
+  /api/auth/logout/:
+    post:
+      operationId: createuser_logout
+      description: Log out the authenticated user by deleting their authentication
+        token.
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema: {}
+          application/x-www-form-urlencoded:
+            schema: {}
+          multipart/form-data:
+            schema: {}
+      responses:
+        '201':
+          content:
+            application/json:
+              schema: {}
+          description: ''
+      tags:
+      - api
+  /api/auth/change_password/:
+    post:
+      operationId: createchange_password
+      description: Change user password.
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema: {}
+          application/x-www-form-urlencoded:
+            schema: {}
+          multipart/form-data:
+            schema: {}
+      responses:
+        '201':
+          content:
+            application/json:
+              schema: {}
+          description: ''
+      tags:
+      - api
+components:
+  schemas:
+    Author:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        first_name:
+          type: string
+          maxLength: 50
+        last_name:
+          type: string
+          maxLength: 50
+      required:
+      - first_name
+      - last_name
+    Publisher:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        name:
+          type: string
+          maxLength: 50
+        location:
+          type: string
+          maxLength: 100
+      required:
+      - name
+      - location
+    Faculty:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        faculty_name:
+          type: string
+          maxLength: 50
+        person:
+          type: string
+          maxLength: 50
+      required:
+      - faculty_name
+      - person
+    Language:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        name:
+          type: string
+          maxLength: 70
+      required:
+      - name
+    Category:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        name:
+          type: string
+          maxLength: 100
+        category_persian:
+          type: string
+          maxLength: 100
+      required:
+      - name
+      - category_persian
+    Section:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        category:
+          type: object
+          properties:
+            id:
+              type: integer
+              readOnly: true
+            name:
+              type: string
+              maxLength: 100
+            category_persian:
+              type: string
+              maxLength: 100
+          required:
+          - name
+          - category_persian
+        section:
+          type: string
+          maxLength: 100
+        section_persian:
+          type: string
+          maxLength: 100
+      required:
+      - category
+      - section
+      - section_persian
+    Book:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        authors:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: integer
+                readOnly: true
+              first_name:
+                type: string
+                maxLength: 50
+              last_name:
+                type: string
+                maxLength: 50
+            required:
+            - first_name
+            - last_name
+        publisher:
+          type: object
+          properties:
+            id:
+              type: integer
+              readOnly: true
+            name:
+              type: string
+              maxLength: 50
+            location:
+              type: string
+              maxLength: 100
+          required:
+          - name
+          - location
+        section:
+          type: object
+          properties:
+            id:
+              type: integer
+              readOnly: true
+            category:
+              type: object
+              properties:
+                id:
+                  type: integer
+                  readOnly: true
+                name:
+                  type: string
+                  maxLength: 100
+                category_persian:
+                  type: string
+                  maxLength: 100
+              required:
+              - name
+              - category_persian
+            section:
+              type: string
+              maxLength: 100
+            section_persian:
+              type: string
+              maxLength: 100
+          required:
+          - category
+          - section
+          - section_persian
+        faculty:
+          type: object
+          properties:
+            id:
+              type: integer
+              readOnly: true
+            faculty_name:
+              type: string
+              maxLength: 50
+            person:
+              type: string
+              maxLength: 50
+          required:
+          - faculty_name
+          - person
+        language:
+          type: object
+          properties:
+            id:
+              type: integer
+              readOnly: true
+            name:
+              type: string
+              maxLength: 70
+          required:
+          - name
+        signatory:
+          type: string
+          maxLength: 100
+        title:
+          type: string
+          maxLength: 255
+        description:
+          type: string
+        isbn:
+          type: string
+          maxLength: 30
+        pages:
+          type: integer
+          maximum: 9223372036854775807
+          minimum: -9223372036854775808
+          format: int64
+        edition:
+          type: integer
+          maximum: 9223372036854775807
+          minimum: -9223372036854775808
+          format: int64
+        publication_year:
+          type: integer
+          maximum: 9223372036854775807
+          minimum: -9223372036854775808
+          format: int64
+      required:
+      - authors
+      - publisher
+      - section
+      - faculty
+      - language
+      - signatory
+      - title
+      - description
+      - isbn
+      - pages
+      - edition
+      - publication_year
+    EBook:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        book:
+          type: object
+          properties:
+            id:
+              type: integer
+              readOnly: true
+            authors:
+              type: array
+              items:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    readOnly: true
+                  first_name:
+                    type: string
+                    maxLength: 50
+                  last_name:
+                    type: string
+                    maxLength: 50
+                required:
+                - first_name
+                - last_name
+            publisher:
+              type: object
+              properties:
+                id:
+                  type: integer
+                  readOnly: true
+                name:
+                  type: string
+                  maxLength: 50
+                location:
+                  type: string
+                  maxLength: 100
+              required:
+              - name
+              - location
+            section:
+              type: object
+              properties:
+                id:
+                  type: integer
+                  readOnly: true
+                category:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                      readOnly: true
+                    name:
+                      type: string
+                      maxLength: 100
+                    category_persian:
+                      type: string
+                      maxLength: 100
+                  required:
+                  - name
+                  - category_persian
+                section:
+                  type: string
+                  maxLength: 100
+                section_persian:
+                  type: string
+                  maxLength: 100
+              required:
+              - category
+              - section
+              - section_persian
+            faculty:
+              type: object
+              properties:
+                id:
+                  type: integer
+                  readOnly: true
+                faculty_name:
+                  type: string
+                  maxLength: 50
+                person:
+                  type: string
+                  maxLength: 50
+              required:
+              - faculty_name
+              - person
+            language:
+              type: object
+              properties:
+                id:
+                  type: integer
+                  readOnly: true
+                name:
+                  type: string
+                  maxLength: 70
+              required:
+              - name
+            signatory:
+              type: string
+              maxLength: 100
+            title:
+              type: string
+              maxLength: 255
+            description:
+              type: string
+            isbn:
+              type: string
+              maxLength: 30
+            pages:
+              type: integer
+              maximum: 9223372036854775807
+              minimum: -9223372036854775808
+              format: int64
+            edition:
+              type: integer
+              maximum: 9223372036854775807
+              minimum: -9223372036854775808
+              format: int64
+            publication_year:
+              type: integer
+              maximum: 9223372036854775807
+              minimum: -9223372036854775808
+              format: int64
+          required:
+          - authors
+          - publisher
+          - section
+          - faculty
+          - language
+          - signatory
+          - title
+          - description
+          - isbn
+          - pages
+          - edition
+          - publication_year
+        extension:
+          type: string
+          maxLength: 30
+      required:
+      - book
+      - extension
+    Copy:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        book:
+          type: object
+          properties:
+            id:
+              type: integer
+              readOnly: true
+            authors:
+              type: array
+              items:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    readOnly: true
+                  first_name:
+                    type: string
+                    maxLength: 50
+                  last_name:
+                    type: string
+                    maxLength: 50
+                required:
+                - first_name
+                - last_name
+            publisher:
+              type: object
+              properties:
+                id:
+                  type: integer
+                  readOnly: true
+                name:
+                  type: string
+                  maxLength: 50
+                location:
+                  type: string
+                  maxLength: 100
+              required:
+              - name
+              - location
+            section:
+              type: object
+              properties:
+                id:
+                  type: integer
+                  readOnly: true
+                category:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                      readOnly: true
+                    name:
+                      type: string
+                      maxLength: 100
+                    category_persian:
+                      type: string
+                      maxLength: 100
+                  required:
+                  - name
+                  - category_persian
+                section:
+                  type: string
+                  maxLength: 100
+                section_persian:
+                  type: string
+                  maxLength: 100
+              required:
+              - category
+              - section
+              - section_persian
+            faculty:
+              type: object
+              properties:
+                id:
+                  type: integer
+                  readOnly: true
+                faculty_name:
+                  type: string
+                  maxLength: 50
+                person:
+                  type: string
+                  maxLength: 50
+              required:
+              - faculty_name
+              - person
+            language:
+              type: object
+              properties:
+                id:
+                  type: integer
+                  readOnly: true
+                name:
+                  type: string
+                  maxLength: 70
+              required:
+              - name
+            signatory:
+              type: string
+              maxLength: 100
+            title:
+              type: string
+              maxLength: 255
+            description:
+              type: string
+            isbn:
+              type: string
+              maxLength: 30
+            pages:
+              type: integer
+              maximum: 9223372036854775807
+              minimum: -9223372036854775808
+              format: int64
+            edition:
+              type: integer
+              maximum: 9223372036854775807
+              minimum: -9223372036854775808
+              format: int64
+            publication_year:
+              type: integer
+              maximum: 9223372036854775807
+              minimum: -9223372036854775808
+              format: int64
+          required:
+          - authors
+          - publisher
+          - section
+          - faculty
+          - language
+          - signatory
+          - title
+          - description
+          - isbn
+          - pages
+          - edition
+          - publication_year
+        status:
+          type: string
+          maxLength: 20
+      required:
+      - book
+      - status
+    Libraries:
+      type: object
+      properties:
+        faculty:
+          type: integer
+          nullable: true
+        content:
+          type: string
+        content_persian:
+          type: string
+        privacy:
+          type: string
+        privacy_persian:
+          type: string
+        services:
+          type: string
+        services_persian:
+          type: string
+        email:
+          type: string
+          maxLength: 250
+      required:
+      - content
+      - content_persian
+      - privacy
+      - privacy_persian
+      - services
+      - services_persian
+      - email
+    Cities:
+      type: object
+      properties:
+        city:
+          type: string
+          maxLength: 80
+        city_person:
+          type: string
+          maxLength: 80
+      required:
+      - city
+      - city_person
+    Semesters:
+      type: object
+      properties:
+        semester:
+          type: string
+          maxLength: 30
+        semester_person:
+          type: string
+          maxLength: 30
+      required:
+      - semester
+      - semester_person
+    Desposites:
+      type: object
+      properties:
+        user:
+          type: integer
+        copy:
+          type: integer
+        issue_date:
+          type: string
+          format: date
+          readOnly: true
+        due_date:
+          type: string
+          format: date
+      required:
+      - user
+      - copy
+      - due_date
+    Profile:
+      type: object
+      properties:
+        user:
+          type: integer
+        first_name:
+          type: string
+          nullable: true
+          maxLength: 50
+        last_name:
+          type: string
+          nullable: true
+          maxLength: 50
+        father_name:
+          type: string
+          nullable: true
+          maxLength: 50
+        contact_no:
+          type: string
+          nullable: true
+          maxLength: 14
+        identification_no:
+          type: string
+          maxLength: 10
+        registration_no:
+          type: string
+          maxLength: 10
+        page_no:
+          type: integer
+          maximum: 9223372036854775807
+          minimum: -9223372036854775808
+          format: int64
+          nullable: true
+        original_address:
+          type: string
+          nullable: true
+          maxLength: 50
+        current_address:
+          type: string
+          nullable: true
+          maxLength: 50
+        signature:
+          type: string
+          nullable: true
+          maxLength: 255
+      required:
+      - user
+    News:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        title:
+          type: string
+          maxLength: 200
+        summary:
+          type: string
+        details:
+          type: string
+        news_reference:
+          type: string
+          maxLength: 255
+        news_title_persian:
+          type: string
+          maxLength: 200
+        news_summary_persian:
+          type: string
+        news_reference_persian:
+          type: string
+          maxLength: 255
+        date:
+          type: string
+          format: date
+        faculty:
+          type: integer
+      required:
+      - title
+      - summary
+      - details
+      - news_reference
+      - news_title_persian
+      - news_summary_persian
+      - news_reference_persian
+      - date
+      - faculty
